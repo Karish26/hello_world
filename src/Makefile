@@ -2,13 +2,13 @@ CC= gcc
 CFLAGS=
 LIB=
 
-all:main
+all:srcfile
 
-myfile:
-	$(CC) $(CFLAGS) -c myfile.c
+headerfile:
+	$(CC) $(CFLAGS) -c headerfile.c
 
-main:myfile
-	$(CC) $(CFLAGS) myfile.o main.c -o main
+srcfile:headerfile
+	$(CC) $(CFLAGS) headerfile.o srcfile.c -c srcfile
 
 run:
-	.\main.exe
+	.\srcfile.exe
